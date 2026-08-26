@@ -1,8 +1,8 @@
 # OpenClaw Mission Control
 
-OpenClaw Mission Control is a local-first operations dashboard for coordinating agent workflows. It makes leases, retries, approval gates, audit events, monitoring, and agent messages visible in one interface while keeping credentialed integrations optional.
+OpenClaw Mission Control is a runnable demo of an agent-workflow control interface. It visualizes leases, bounded retries, approval gates, audit events, monitoring, and agent messages using deterministic local state.
 
-The repository includes a deterministic demo adapter, so the real Next.js interface runs without Convex, OpenClaw, or provider credentials.
+This public edition does **not** operate a live OpenClaw deployment. It never contacts Convex or OpenClaw, operational APIs return `403`, and demo state resets on refresh. The retained integration code is included for architecture review and is disabled by design.
 
 ## Features
 
@@ -86,7 +86,9 @@ Read [SECURITY.md](SECURITY.md) and [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md)
 - Add documented adapters for more durable stores without weakening local defaults
 - Expand the sanitized visual regression suite beyond the primary workflow view
 
-## Attribution
+## Provenance and attribution
+
+This is a sanitized public edition of a privately developed project, not the production deployment. See [PROVENANCE.md](PROVENANCE.md) for the export boundary.
 
 This project is based in part on `manish-raana/openclaw-mission-control` under Apache-2.0 and has been substantially modified. The inherited favicon was replaced with an original asset. See [NOTICE.md](NOTICE.md) and [LICENSES/Apache-2.0.txt](LICENSES/Apache-2.0.txt) for required notices. Other dependencies are listed in `package.json` and `pnpm-lock.yaml`; their licenses and trademarks remain with their owners.
 
